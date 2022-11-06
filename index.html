@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Frontend Mentor | QR code component</title>
+    <title>QR code component</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
@@ -26,7 +26,14 @@
   --dark_blue: hsl(218, 44%, 22%);
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
   background-color: var(--light_gray);
 }
 
@@ -35,6 +42,8 @@ body {
   position: absolute;
   bottom: 0px;
   right: 0px;
+  text-align: right;
+  margin: 0 0.5em;
 
 }
 .attribution a { color: hsl(228, 45%, 44%); }
@@ -44,15 +53,16 @@ body {
   box-shadow: 0px 25px 25px 0px rgba(0,0,0,4.77%);
 
   color: var(--grayish_blue);
-  font-family: "Outfit";
+  font-family: "Outfit", sans-serif;
   font-weight: 400;
   font-size: 15px;
 
   padding: 15px;
   margin: 0;
   width: 320px;
-  height: 497px;
-  position: absolute;
+  max-width: 100%;
+  min-height: 497px;
+  position: relative;
   text-align: center;
   top: 50%;
   left: 50%;
@@ -62,7 +72,8 @@ body {
   border-radius: 10px;
 
   width: 288px;
-  height: 288px;
+  max-width: 100%;
+  height: auto;
 
   margin-left: auto;
   margin-right: auto;
@@ -83,8 +94,8 @@ body {
     </style>
   </head>
   <body>
-    <div class="card">
-      <img src="images/image-qr-code.png"></img>
+    <main class="card">
+      <img src="images/image-qr-code.png" alt="QR code"></img>
 
       <h1>
         Improve your front-end skills by building projects
@@ -93,11 +104,11 @@ body {
       <p>
       Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
       </p>
-    </div>
+    </main>
 
-    <div class="attribution">
+    <footer class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/Paul-Andre/">Paul-Andre Henegar</a>.
-    </div>
+    </footer>
   </body>
 </html>
